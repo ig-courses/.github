@@ -23,6 +23,10 @@ Chaque année dispose d'un repo. Pour faciliter la recherche, adoptez cette arbo
 
 Idéalement, avant d'upload les corrections, fusionnez les images en un seul pdf. A défaut, numérotez les dans l'ordre de lecture.
 
+## Discussions
+
+Petite feature qui a l'air sympa, pouvoir discuter sur les repos (Q&A, sondages, etc.) et garder une trace (pratique pour les corrections d'exams par ex). C'est activé sur tous les repos, à voir si c'est pratique
+
 Enjoy ! 🧑‍💻
 
 ## Ajout automatisé d'étudiants (pour les admins)

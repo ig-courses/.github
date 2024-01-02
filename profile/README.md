@@ -24,3 +24,20 @@ Chaque année dispose d'un repo. Pour faciliter la recherche, adoptez cette arbo
 Idéalement, avant d'upload les corrections, fusionnez les images en un seul pdf. A défaut, numérotez les dans l'ordre de lecture.
 
 Enjoy ! 🧑‍💻
+
+## Ajout automatisé d'étudiants (pour les admins)
+
+Plutôt que d'entrer un par un les handles des étudiants, on peut utiliser la CLI de Github.
+
+1. Installer la CLI de Github: [tuto d'install](https://github.com/cli/cli#installation)
+2. S'authentifier: `gh auth login`
+3. Récupérer les handles dans un fichier `handles` (un par ligne)
+4. Ajouter les étudiants à l'orga:
+   - Linux: utiliser `xargs` pour lire le fichier ligne par ligne et rajouter les étudiants à l'orga
+
+        ```zsh
+        xargs -a people -I {} zsh -c 'gh api -X PUT /orgs/ig-courses/memberships/{}' 
+        ```
+
+        Note: `-I {}` permet de dire que `{}` est le placeholder pour chaque ligne du fichier `people`. On aurait pu mettre autre chose que `{}` (comme `\m/` ou `V.v.V`)
+   - Windows: 🤡
